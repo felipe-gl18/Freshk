@@ -6,6 +6,9 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import styled, { keyframes } from "styled-components";
 
+//images
+import logo from "../assets/logo.png";
+
 const StyledNavbar = styled.nav`
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +23,16 @@ const StyledNavbar = styled.nav`
 
   @media (max-width: 860px) {
     padding: 39px 80px;
+  }
+`;
+
+const Logo = styled.div`
+  width: 100px;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -118,7 +131,9 @@ export default function Navbar() {
     <StyledNavbar>
       <Backdrop menuIsOpen={menuIsOpen} />
       <TopRow>
-        <h2>Alcohol</h2>
+        <Logo>
+          <img src={logo} alt="EEstate" />
+        </Logo>
         <Menu onClick={() => setMenuIsOpen(!menuIsOpen)}>
           {menuIsOpen ? <IoClose size={32} /> : <HiMenuAlt3 size={32} />}
         </Menu>
