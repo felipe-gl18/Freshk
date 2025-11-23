@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import type { Mesh } from "three";
 import { OrbitControls } from "@react-three/drei";
 import Navbar from "./components/Navbar";
+import Headline from "./components/Headline";
 
 const Cube = ({
   position,
@@ -129,6 +130,7 @@ function App() {
         <OrbitControls enableRotate={true} />
       </Canvas> */}
       <Navbar />
+      <Headline />
     </div>
   );
 }
