@@ -8,6 +8,13 @@ const StyledHeadline = styled.div`
   gap: 48px;
   color: white;
   padding: 100px;
+  min-width: 482px;
+
+  @media (max-width: 700px) {
+    display: flex;
+    min-width: fit-content;
+    padding: 60px;
+  }
 `;
 
 const HeadlineText = styled.div`
@@ -27,6 +34,15 @@ const HeadlineText = styled.div`
 
   span {
     font-size: 1.1rem;
+  }
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 1.1rem;
+    }
   }
 `;
 
